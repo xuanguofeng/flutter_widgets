@@ -8,35 +8,18 @@ class FWMainApp extends StatefulWidget {
 }
 
 class _FWMainAppState extends State<FWMainApp> {
+
   var _body;
   List<Column> _columns = List();
 
   initData() {
-    for (var i = 0; i < AppStrings.gridTitle.length; i++) {
-      var mColumn = Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Image.asset(
-            AppStrings.gridTitleImages[i],
-            width: 50.0,
-            height: 50.0,
-          ),
-          Container(
-            margin: const EdgeInsets.only(top: 8.0),
-            child: Text(
-              AppStrings.gridTitle[i],
-              style: TextStyle(
-                  fontWeight: FontWeight.normal,
-                  fontSize: 12.0,
-                  color: Colors.grey[500]),
-            ),
-          )
-        ],
-      );
-      _columns.add(mColumn);
-    }
+    initColumns();
 
-    _body = new CustomScrollView(
+    initBody();
+  }
+
+  void initBody() {
+       _body = new CustomScrollView(
       primary: false,
       slivers: <Widget>[
         new SliverPadding(
@@ -56,9 +39,40 @@ class _FWMainAppState extends State<FWMainApp> {
     );
   }
 
+  void initColumns() {
+     for (var i = 0; i < AppStrings.gridTitle.length; i++) {
+      createColumn(i);
+    }
+  }
+
+  void createColumn(int i) {
+     var mColumn = Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Image.asset(
+          AppStrings.gridTitleImages[i],
+          width: 50.0,
+          height: 50.0,
+        ),
+        Container(
+          margin: const EdgeInsets.only(top: 8.0),
+          child: Text(
+            AppStrings.gridTitle[i],
+            style: TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 12.0,
+                color: Colors.grey[500]),
+          ),
+        )
+      ],
+    );
+    _columns.add(mColumn);
+  }
+
   @override
   Widget build(BuildContext context) {
     initData();
+
     return MaterialApp(
       theme: ThemeData(
           primaryColor: AppColors.colorPrimary, accentColor: Colors.blue),
