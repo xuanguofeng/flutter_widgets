@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/constant/colors.dart';
 import 'package:flutter_widgets/constant/strings.dart';
+import 'package:flutter_widgets/pages/widget/BtnSamplePage.dart';
+import 'package:flutter_widgets/pages/widget/DialogSamplePage.dart';
+import 'package:flutter_widgets/pages/widget/TextSamplePage.dart';
+import 'package:flutter_widgets/pages/widget/LayoutSamplePage.dart';
 
 class FWMainApp extends StatefulWidget {
   @override
@@ -8,18 +12,64 @@ class FWMainApp extends StatefulWidget {
 }
 
 class _FWMainAppState extends State<FWMainApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(
+          primaryColor: AppColors.colorPrimary, accentColor: Colors.blue),
+      home: _Home(),
+      routes: <String, WidgetBuilder>{
+        '/BtnSamplePage': (BuildContext context) => BtnSamplePage(),
+        '/TextSamplePage': (BuildContext context) => TextSamplePage(),
+        '/DialogSamplePage': (BuildContext context) => DialogSamplePage(),
+        '/LayoutSamplePage': (BuildContext context) => LayoutSamplePage(),
+      },
+    );
+  }
+}
 
+// ignore: must_be_immutable
+class _Home extends StatelessWidget {
   var _body;
-  List<Column> _columns = List();
+  List<GestureDetector> _columns = List();
 
-  initData() {
-    initColumns();
+  void initColumns(BuildContext context) {
+    for (var i = 0; i < AppStrings.gridTitle.length; i++) {
+      createColumn(i,context);
+    }
+  }
 
-    initBody();
+  void createColumn(int i, BuildContext context) {
+    var mColumn = GestureDetector(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Image.asset(
+            AppStrings.gridTitleImages[i],
+            width: 50.0,
+            height: 50.0,
+          ),
+          Container(
+            margin: const EdgeInsets.only(top: 8.0),
+            child: Text(
+              AppStrings.gridTitle[i],
+              style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  fontSize: 12.0,
+                  color: Colors.grey[500]),
+            ),
+          )
+        ],
+      ),
+      onTap: () {
+        Navigator.of(context).pushNamed(AppStrings.gridPagesName[i]);
+      },
+    );
+    _columns.add(mColumn);
   }
 
   void initBody() {
-       _body = new CustomScrollView(
+    _body = new CustomScrollView(
       primary: false,
       slivers: <Widget>[
         new SliverPadding(
@@ -39,49 +89,23 @@ class _FWMainAppState extends State<FWMainApp> {
     );
   }
 
-  void initColumns() {
-     for (var i = 0; i < AppStrings.gridTitle.length; i++) {
-      createColumn(i);
-    }
-  }
-
-  void createColumn(int i) {
-     var mColumn = Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Image.asset(
-          AppStrings.gridTitleImages[i],
-          width: 50.0,
-          height: 50.0,
-        ),
-        Container(
-          margin: const EdgeInsets.only(top: 8.0),
-          child: Text(
-            AppStrings.gridTitle[i],
-            style: TextStyle(
-                fontWeight: FontWeight.normal,
-                fontSize: 12.0,
-                color: Colors.grey[500]),
-          ),
-        )
-      ],
-    );
-    _columns.add(mColumn);
-  }
-
   @override
   Widget build(BuildContext context) {
-    initData();
+    initColumns(context);
+    initBody();
 
-    return MaterialApp(
-      theme: ThemeData(
-          primaryColor: AppColors.colorPrimary, accentColor: Colors.blue),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(AppStrings.appBarTitle),
-        ),
-        body: _body,
+    return new Scaffold(
+      appBar: AppBar(
+        title: Text(AppStrings.appBarTitle),
+        actions: <Widget>[
+          new IconButton(
+            icon: const Icon(Icons.build),
+            onPressed: () async {},
+            tooltip: 'tool',
+          )
+        ],
       ),
+      body: _body,
     );
   }
 }

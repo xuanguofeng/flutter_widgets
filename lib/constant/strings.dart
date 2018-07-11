@@ -1,5 +1,4 @@
 class AppStrings {
-
   static final String appBarTitle = 'Flutter控件集合';
 
   static final List<String> gridTitle = ['Button', 'Text', 'Dialog', 'Layout'];
@@ -11,4 +10,10 @@ class AppStrings {
     'images/ic_layout.png'
   ];
 
+  static final List<String> gridPagesName = [
+    '/BtnSamplePage',
+    '/TextSamplePage',
+    '/DialogSamplePage',
+    '/LayoutSamplePage'
+  ];
 }

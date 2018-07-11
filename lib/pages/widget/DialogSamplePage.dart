@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
-class FWTablePager extends StatefulWidget {
+class DialogSamplePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return new FWTablePagerState();
+    return new DialogSamplePageState();
   }
 }
 
-class FWTablePagerState extends State<FWTablePager> {
+class DialogSamplePageState extends State<DialogSamplePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("title"),
+        title: Text("DialogSamplePage"),
       ),
       body: Center(
-        child: Text("test"),
+        child: Text("DialogSamplePage"),
       ),
     );
   }
