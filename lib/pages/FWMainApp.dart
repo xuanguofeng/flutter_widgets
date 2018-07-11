@@ -35,7 +35,7 @@ class _Home extends StatelessWidget {
 
   void initColumns(BuildContext context) {
     for (var i = 0; i < AppStrings.gridTitle.length; i++) {
-      createColumn(i,context);
+      createColumn(i, context);
     }
   }
 
@@ -94,11 +94,11 @@ class _Home extends StatelessWidget {
     initColumns(context);
     initBody();
 
-    return new Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: Text(AppStrings.appBarTitle),
         actions: <Widget>[
-          new IconButton(
+          IconButton(
             icon: const Icon(Icons.build),
             onPressed: () async {},
             tooltip: 'tool',
