@@ -12,7 +12,6 @@ class BtnSamplePageState extends State<BtnSamplePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
         title: Text("BtnSamplePage"),
       ),
       body: Center(
