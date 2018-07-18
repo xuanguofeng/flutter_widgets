@@ -12,10 +12,55 @@ class LayoutSamplePageState extends State<LayoutSamplePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("LayoutSamplePage"),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.description),
+            onPressed: () async {},
+            tooltip: 'tool',
+          )
+        ],
+        title: Text("LayoutSample"),
       ),
-      body: Center(
-        child: Text("LayoutSamplePage"),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.all(20.0),
+            alignment: Alignment.center,
+            child: RaisedButton(
+              textColor: Colors.white,
+              color: Colors.blue,
+              child: Text('ContainerLayout'),
+              onPressed: () {
+                Navigator.of(context).pushNamed('/ContainerPage');
+              },
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(20.0),
+            alignment: Alignment.center,
+            child: RaisedButton(
+              textColor: Colors.white,
+              color: Colors.blue,
+              child: Text('CenterLayout'),
+              onPressed: () {
+                Navigator.of(context).pushNamed('/CenterPage');
+              },
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(20.0),
+            alignment: Alignment.center,
+            child: RaisedButton(
+              textColor: Colors.white,
+              color: Colors.blue,
+              child: Text('PaddingLayout'),
+              onPressed: () {
+                Navigator.of(context).pushNamed('/PaddingPage');
+              },
+            ),
+          ),
+        ],
       ),
     );
   }

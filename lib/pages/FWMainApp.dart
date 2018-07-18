@@ -5,6 +5,9 @@ import 'package:flutter_widgets/pages/widget/BtnSamplePage.dart';
 import 'package:flutter_widgets/pages/widget/DialogSamplePage.dart';
 import 'package:flutter_widgets/pages/widget/TextSamplePage.dart';
 import 'package:flutter_widgets/pages/widget/LayoutSamplePage.dart';
+import 'package:flutter_widgets/pages/widget/layout/ContainerPage.dart';
+import 'package:flutter_widgets/pages/widget/layout/CenterPage.dart';
+import 'package:flutter_widgets/pages/widget/layout/PaddingPage.dart';
 
 class FWMainApp extends StatefulWidget {
   @override
@@ -23,6 +26,9 @@ class _FWMainAppState extends State<FWMainApp> {
         '/TextSamplePage': (BuildContext context) => TextSamplePage(),
         '/DialogSamplePage': (BuildContext context) => DialogSamplePage(),
         '/LayoutSamplePage': (BuildContext context) => LayoutSamplePage(),
+        '/ContainerPage': (BuildContext context) => ContainerPage(),
+        '/CenterPage': (BuildContext context) => CenterPage(),
+        '/PaddingPage': (BuildContext context) => PaddingPage(),
       },
     );
   }
