@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class DialogSamplePage extends StatefulWidget {
   @override
@@ -69,11 +70,70 @@ class DialogSamplePageState extends State<DialogSamplePage> {
     );
   }
 
-  Future<Null> _showSnackBar() async {
-    return ScaffoldState().showSnackBar(SnackBar(
-      content: Text("xuanguofeng"),
-      backgroundColor: Colors.blue,
-    ));
+  Future<Null> _cupertinoAlertDialog() async {
+    return showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext context) {
+          return CupertinoAlertDialog(
+            title: Text('标题'),
+            content: Text("这是一个ios风格的弹窗！"),
+            actions: <Widget>[
+              FlatButton(
+                child: Text('取消'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+              FlatButton(
+                child: Text('确认'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              )
+            ],
+          );
+        });
+  }
+
+  Future<Null> _cupertinonPicker() async {
+    return showModalBottomSheet(
+        context: context,
+        builder: (BuildContext context) {
+          return Container(
+            height: 300.0,
+            alignment: Alignment.bottomCenter,
+            child: CupertinoPicker(
+              backgroundColor: Colors.white,
+              itemExtent: 20.0,
+              children: <Widget>[
+                Text(
+                  'item1',
+                  style: TextStyle(fontSize: 18.0,color: Colors.blue),
+                ),
+                Text(
+                  'item2',
+                  style: TextStyle(fontSize: 18.0,color: Colors.blue),
+                ),
+                Text(
+                  'item3',
+                  style: TextStyle(fontSize: 18.0,color: Colors.blue),
+                ),
+                Text(
+                  'item4',
+                  style: TextStyle(fontSize: 18.0,color: Colors.blue),
+                ),
+                Text(
+                  'item5',
+                  style: TextStyle(fontSize: 18.0,color: Colors.blue),
+                ),
+              ],
+              onSelectedItemChanged: (int value) {
+                print("${value.toString()}");
+              },
+            ),
+          );
+        });
   }
 
   @override
@@ -164,41 +224,27 @@ class DialogSamplePageState extends State<DialogSamplePage> {
               },
             ),
           ),
-//          Container(
-//            margin: EdgeInsets.all(20.0),
-//            alignment: Alignment.center,
-//            child: RaisedButton(
-//              textColor: Colors.white,
-//              color: Colors.blue,
-//              child: Text('snackBar'),
-//              onPressed: () {
-//                Scaffold.of(context).showSnackBar(SnackBar(
-//                  content: Container(
-//                    child: Padding(
-//                      padding: const EdgeInsets.all(20.0),
-//                      child: Text(
-//                        "这是一个bottomSheet",
-//                        textAlign: TextAlign.center,
-//                        style: TextStyle(
-//                            color: Theme.of(context).accentColor,
-//                            fontSize: 14.0),
-//                      ),
-//                    ),
-//                  ),
-//                  backgroundColor: Colors.blue,
-//                  duration: Duration(seconds: 10),
-//                  action: SnackBarAction(
-//                      label: "sss",
-//                      onPressed: () {
-//                        print('ss');
-//                      }),
-//                ).build(context));
-//
-//
-////                ScaffoldState().showSnackBar(.build(context));
-//              },
-//            ),
-//          ),
+          Container(
+              margin: EdgeInsets.all(20.0),
+              alignment: Alignment.center,
+              child: RaisedButton(
+                  textColor: Colors.white,
+                  color: Colors.blue,
+                  child: Text('CupertinoDialog'),
+                  onPressed: () {
+                    _cupertinoAlertDialog();
+                  })),
+          Container(
+            margin: EdgeInsets.all(20.0),
+            alignment: Alignment.center,
+            child: RaisedButton(
+                textColor: Colors.white,
+                color: Colors.blue,
+                child: Text('CupertinoPicker'),
+                onPressed: () {
+                  _cupertinonPicker();
+                }),
+          )
         ],
       ),
     );

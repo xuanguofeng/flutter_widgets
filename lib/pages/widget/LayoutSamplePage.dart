@@ -8,6 +8,7 @@ class LayoutSamplePage extends StatefulWidget {
 }
 
 class LayoutSamplePageState extends State<LayoutSamplePage> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
