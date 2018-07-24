@@ -8,6 +8,8 @@ import 'package:flutter_widgets/pages/widget/LayoutSamplePage.dart';
 import 'package:flutter_widgets/pages/widget/layout/ContainerPage.dart';
 import 'package:flutter_widgets/pages/widget/layout/CenterPage.dart';
 import 'package:flutter_widgets/pages/widget/layout/PaddingPage.dart';
+import 'package:flutter_widgets/pages/widget/TabBarSamplePage.dart';
+import 'package:flutter_widgets/pages/widget/tabbar/TabBarPage.dart';
 
 class FWMainApp extends StatefulWidget {
   @override
@@ -19,7 +21,7 @@ class _FWMainAppState extends State<FWMainApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          primaryColor: AppColors.colorPrimary, accentColor: Colors.blue),
+          primaryColor: Colors.white, accentColor: Colors.white),
       home: _Home(),
       routes: <String, WidgetBuilder>{
         '/BtnSamplePage': (BuildContext context) => BtnSamplePage(),
@@ -29,6 +31,8 @@ class _FWMainAppState extends State<FWMainApp> {
         '/ContainerPage': (BuildContext context) => ContainerPage(),
         '/CenterPage': (BuildContext context) => CenterPage(),
         '/PaddingPage': (BuildContext context) => PaddingPage(),
+        '/TabBarSamplePage': (BuildContext context) => TabBarSamplePage(),
+        '/TabBarPage': (BuildContext context) => TabBarPage(),
       },
     );
   }
@@ -88,6 +92,7 @@ class _Home extends StatelessWidget {
               _columns[1],
               _columns[2],
               _columns[3],
+              _columns[4],
             ],
           ),
         ),
