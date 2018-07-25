@@ -10,6 +10,10 @@ import 'package:flutter_widgets/pages/widget/layout/CenterPage.dart';
 import 'package:flutter_widgets/pages/widget/layout/PaddingPage.dart';
 import 'package:flutter_widgets/pages/widget/TabBarSamplePage.dart';
 import 'package:flutter_widgets/pages/widget/tabbar/TabBarPage.dart';
+import 'package:flutter_widgets/pages/widget/layout/AlignLayoutPage.dart';
+import 'package:flutter_widgets/pages/widget/layout/RowPage.dart';
+import 'package:flutter_widgets/pages/widget/layout/ColumnPage.dart';
+import 'package:flutter_widgets/pages/widget/layout/StackPage.dart';
 
 class FWMainApp extends StatefulWidget {
   @override
@@ -33,6 +37,10 @@ class _FWMainAppState extends State<FWMainApp> {
         '/PaddingPage': (BuildContext context) => PaddingPage(),
         '/TabBarSamplePage': (BuildContext context) => TabBarSamplePage(),
         '/TabBarPage': (BuildContext context) => TabBarPage(),
+        '/AlignLayoutPage': (BuildContext context) => AlignLayoutPage(),
+        '/RowPage': (BuildContext context) => RowPage(),
+        '/ColumnPage': (BuildContext context) => ColumnPage(),
+        '/StackPage': (BuildContext context) => StackPage(),
       },
     );
   }

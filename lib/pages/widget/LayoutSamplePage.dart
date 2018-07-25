@@ -8,7 +8,6 @@ class LayoutSamplePage extends StatefulWidget {
 }
 
 class LayoutSamplePageState extends State<LayoutSamplePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,6 +57,54 @@ class LayoutSamplePageState extends State<LayoutSamplePage> {
               child: Text('PaddingLayout'),
               onPressed: () {
                 Navigator.of(context).pushNamed('/PaddingPage');
+              },
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(20.0),
+            alignment: Alignment.center,
+            child: RaisedButton(
+              textColor: Colors.white,
+              color: Colors.blue,
+              child: Text('AlignLayout'),
+              onPressed: () {
+                Navigator.of(context).pushNamed('/AlignLayoutPage');
+              },
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(20.0),
+            alignment: Alignment.center,
+            child: RaisedButton(
+              textColor: Colors.white,
+              color: Colors.blue,
+              child: Text('Row'),
+              onPressed: () {
+                Navigator.of(context).pushNamed('/RowPage');
+              },
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(20.0),
+            alignment: Alignment.center,
+            child: RaisedButton(
+              textColor: Colors.white,
+              color: Colors.blue,
+              child: Text('Column'),
+              onPressed: () {
+                Navigator.of(context).pushNamed('/ColumnPage');
+              },
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(20.0),
+            alignment: Alignment.center,
+            child: RaisedButton(
+              textColor: Colors.white,
+              color: Colors.blue,
+              child: Text('Stack'),
+              onPressed: () {
+                Navigator.of(context).pushNamed('/StackPage');
               },
             ),
           ),
