@@ -41,6 +41,18 @@ class TabBarSamplePageState extends State<TabBarSamplePage> {
               },
             ),
           ),
+          Container(
+            margin: EdgeInsets.all(20.0),
+            alignment: Alignment.center,
+            child: RaisedButton(
+              textColor: Colors.white,
+              color: Colors.blue,
+              child: Text('CupertinoTabBar（ios风格底部导航）'),
+              onPressed: () {
+                Navigator.of(context).pushNamed('/CupertinoTabBarPage');
+              },
+            ),
+          ),
         ],
       ),
     );
