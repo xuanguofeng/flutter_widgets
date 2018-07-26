@@ -17,6 +17,7 @@ import 'package:flutter_widgets/pages/widget/layout/StackPage.dart';
 import 'package:flutter_widgets/pages/widget/ListSamplePage.dart';
 import 'package:flutter_widgets/pages/widget/tabbar/BottomNavigationBarPage.dart';
 import 'package:flutter_widgets/pages/widget/tabbar/CupertinoTabBarPage.dart';
+import 'package:flutter_widgets/pages/widget/tabbar/CupertinoNavigationBarPage.dart';
 
 class FWMainApp extends StatefulWidget {
   @override
@@ -47,6 +48,7 @@ class _FWMainAppState extends State<FWMainApp> {
         '/ListSamplePage': (BuildContext context) => ListSamplePage(),
         '/BottomNavigationBarPage': (BuildContext context) => BottomNavigationBarPage(),
         '/CupertinoTabBarPage': (BuildContext context) => CupertinoTabBarPage(),
+        '/CupertinoNavigationBarPage': (BuildContext context) => CupertinoNavigationBarPage(),
       },
     );
   }
