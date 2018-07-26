@@ -140,7 +140,7 @@ class DialogSamplePageState extends State<DialogSamplePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("DialogSamplePage"),
+        title: Text("Dialog"),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,

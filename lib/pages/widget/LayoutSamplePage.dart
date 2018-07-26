@@ -19,7 +19,7 @@ class LayoutSamplePageState extends State<LayoutSamplePage> {
             tooltip: 'tool',
           )
         ],
-        title: Text("LayoutSample"),
+        title: Text("Layout"),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,

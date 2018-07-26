@@ -12,7 +12,7 @@ class TextSamplePageState extends State<TextSamplePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("TextSamplePage"),
+        title: Text("Text"),
       ),
       body:
           Column(

@@ -12,7 +12,7 @@ class TabBarSamplePageState extends State<TabBarSamplePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('TabBarSamplePage'),
+        title: Text('TabBar'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -26,6 +26,18 @@ class TabBarSamplePageState extends State<TabBarSamplePage> {
               child: Text('TabBar'),
               onPressed: () {
                 Navigator.of(context).pushNamed('/TabBarPage');
+              },
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(20.0),
+            alignment: Alignment.center,
+            child: RaisedButton(
+              textColor: Colors.white,
+              color: Colors.blue,
+              child: Text('BottomNavigationBar'),
+              onPressed: () {
+                Navigator.of(context).pushNamed('/BottomNavigationBarPage');
               },
             ),
           ),

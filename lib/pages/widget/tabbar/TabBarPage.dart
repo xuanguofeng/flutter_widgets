@@ -16,9 +16,9 @@ class TabBarPageState extends State<TabBarPage> {
         appBar: AppBar(
           title: const Text('Tabbed AppBar'),
           bottom: TabBar(
-              indicatorColor: Colors.blue,
-              labelColor: Colors.blue,
-              unselectedLabelColor: Colors.black,
+              indicatorColor: Colors.black,
+              labelColor: Colors.black,
+              unselectedLabelColor: Colors.white,
               tabs: choices.map((Choice choice) {
                 return Tab(
                   text: choice.title,

@@ -20,3 +20,5 @@ flutter:
     - images/ic_dialog.png
     - images/ic_layout.png
     - images/ic_text.png
+    - images/ic_tabbar.png
+    - images/ic_list.png

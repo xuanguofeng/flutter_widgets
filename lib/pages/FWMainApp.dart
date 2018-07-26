@@ -14,6 +14,8 @@ import 'package:flutter_widgets/pages/widget/layout/AlignLayoutPage.dart';
 import 'package:flutter_widgets/pages/widget/layout/RowPage.dart';
 import 'package:flutter_widgets/pages/widget/layout/ColumnPage.dart';
 import 'package:flutter_widgets/pages/widget/layout/StackPage.dart';
+import 'package:flutter_widgets/pages/widget/ListSamplePage.dart';
+import 'package:flutter_widgets/pages/widget/tabbar/BottomNavigationBarPage.dart';
 
 class FWMainApp extends StatefulWidget {
   @override
@@ -25,7 +27,7 @@ class _FWMainAppState extends State<FWMainApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          primaryColor: Colors.white, accentColor: Colors.white),
+          primaryColor: Colors.blue, accentColor: Colors.white),
       home: _Home(),
       routes: <String, WidgetBuilder>{
         '/BtnSamplePage': (BuildContext context) => BtnSamplePage(),
@@ -41,6 +43,8 @@ class _FWMainAppState extends State<FWMainApp> {
         '/RowPage': (BuildContext context) => RowPage(),
         '/ColumnPage': (BuildContext context) => ColumnPage(),
         '/StackPage': (BuildContext context) => StackPage(),
+        '/ListSamplePage': (BuildContext context) => ListSamplePage(),
+        '/BottomNavigationBarPage': (BuildContext context) => BottomNavigationBarPage(),
       },
     );
   }
@@ -101,6 +105,7 @@ class _Home extends StatelessWidget {
               _columns[2],
               _columns[3],
               _columns[4],
+              _columns[5],
             ],
           ),
         ),
