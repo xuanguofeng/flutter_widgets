@@ -18,6 +18,7 @@ import 'package:flutter_widgets/pages/widget/ListSamplePage.dart';
 import 'package:flutter_widgets/pages/widget/tabbar/BottomNavigationBarPage.dart';
 import 'package:flutter_widgets/pages/widget/tabbar/CupertinoTabBarPage.dart';
 import 'package:flutter_widgets/pages/widget/tabbar/CupertinoNavigationBarPage.dart';
+import 'package:flutter_widgets/pages/widget/list/AnimatedListSample.dart';
 
 class FWMainApp extends StatefulWidget {
   @override
@@ -49,6 +50,7 @@ class _FWMainAppState extends State<FWMainApp> {
         '/BottomNavigationBarPage': (BuildContext context) => BottomNavigationBarPage(),
         '/CupertinoTabBarPage': (BuildContext context) => CupertinoTabBarPage(),
         '/CupertinoNavigationBarPage': (BuildContext context) => CupertinoNavigationBarPage(),
+        '/AnimatedListSample': (BuildContext context) => AnimatedListSample(),
       },
     );
   }
