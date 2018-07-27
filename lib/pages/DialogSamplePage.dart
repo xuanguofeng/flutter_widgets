@@ -17,7 +17,7 @@ class DialogSamplePageState extends State<DialogSamplePage> {
         context: context,
         builder: (BuildContext context) {
           return new SimpleDialog(
-            title: const Text('弹窗title'),
+            title: const Text('Title'),
             children: <Widget>[
               new SimpleDialogOption(
                 onPressed: () {
@@ -31,6 +31,24 @@ class DialogSamplePageState extends State<DialogSamplePage> {
                 },
                 child: const Text('item two'),
               ),
+              new SimpleDialogOption(
+                onPressed: () {
+                  Navigator.pop(context, Department.state);
+                },
+                child: const Text('item three'),
+              ),
+              new SimpleDialogOption(
+                onPressed: () {
+                  Navigator.pop(context, Department.state);
+                },
+                child: const Text('item four'),
+              ),
+              new SimpleDialogOption(
+                onPressed: () {
+                  Navigator.pop(context, Department.state);
+                },
+                child: const Text('item five'),
+              )
             ],
           );
         })) {
@@ -59,7 +77,7 @@ class DialogSamplePageState extends State<DialogSamplePage> {
           ),
           actions: <Widget>[
             new FlatButton(
-              child: new Text('确认'),
+              child: new Text('确认',style: TextStyle(color: Colors.blue),),
               onPressed: () {
                 Navigator.of(context).pop();
               },
@@ -109,23 +127,23 @@ class DialogSamplePageState extends State<DialogSamplePage> {
               children: <Widget>[
                 Text(
                   'item1',
-                  style: TextStyle(fontSize: 18.0,color: Colors.blue),
+                  style: TextStyle(fontSize: 18.0, color: Colors.blue),
                 ),
                 Text(
                   'item2',
-                  style: TextStyle(fontSize: 18.0,color: Colors.blue),
+                  style: TextStyle(fontSize: 18.0, color: Colors.blue),
                 ),
                 Text(
                   'item3',
-                  style: TextStyle(fontSize: 18.0,color: Colors.blue),
+                  style: TextStyle(fontSize: 18.0, color: Colors.blue),
                 ),
                 Text(
                   'item4',
-                  style: TextStyle(fontSize: 18.0,color: Colors.blue),
+                  style: TextStyle(fontSize: 18.0, color: Colors.blue),
                 ),
                 Text(
                   'item5',
-                  style: TextStyle(fontSize: 18.0,color: Colors.blue),
+                  style: TextStyle(fontSize: 18.0, color: Colors.blue),
                 ),
               ],
               onSelectedItemChanged: (int value) {
@@ -145,106 +163,74 @@ class DialogSamplePageState extends State<DialogSamplePage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          Container(
-            margin: EdgeInsets.all(20.0),
-            alignment: Alignment.center,
-            child: RaisedButton(
-              textColor: Colors.white,
-              color: Colors.blue,
-              child: Text('SimpleDialog'),
-              onPressed: () {
-                _showSimpleDialog();
-              },
-            ),
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('列表类型弹窗'),
+            onTap: () {
+              _showSimpleDialog();
+            },
           ),
-          Container(
-            margin: EdgeInsets.all(20.0),
-            alignment: Alignment.center,
-            child: RaisedButton(
-              textColor: Colors.white,
-              color: Colors.blue,
-              child: Text('AlertDialog'),
-              onPressed: () {
-                _showAlertDialog();
-              },
-            ),
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('普通消息类型对话框'),
+            onTap: () {
+              _showAlertDialog();
+            },
           ),
-          Container(
-            margin: EdgeInsets.all(20.0),
-            alignment: Alignment.center,
-            child: RaisedButton(
-              textColor: Colors.white,
-              color: Colors.blue,
-              child: Text('timePicker'),
-              onPressed: () {
-                showTimePicker(context: context, initialTime: TimeOfDay.now());
-              },
-            ),
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('时间类型弹窗'),
+            onTap: () {
+              showTimePicker(context: context, initialTime: TimeOfDay.now());
+            },
           ),
-          Container(
-            margin: EdgeInsets.all(20.0),
-            alignment: Alignment.center,
-            child: RaisedButton(
-              textColor: Colors.white,
-              color: Colors.blue,
-              child: Text('DatePicker'),
-              onPressed: () {
-                showDatePicker(
-                    context: context,
-                    initialDate: DateTime.now(),
-                    firstDate: DateTime(2010),
-                    lastDate: DateTime.now());
-              },
-            ),
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('日期类型弹窗'),
+            onTap: () {
+              showDatePicker(
+                  context: context,
+                  initialDate: DateTime.now(),
+                  firstDate: DateTime(2010),
+                  lastDate: DateTime.now());
+            },
           ),
-          Container(
-            margin: EdgeInsets.all(20.0),
-            alignment: Alignment.center,
-            child: RaisedButton(
-              textColor: Colors.white,
-              color: Colors.blue,
-              child: Text('bottomsheet'),
-              onPressed: () {
-                showModalBottomSheet(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return Container(
-                        child: Padding(
-                          padding: const EdgeInsets.all(20.0),
-                          child: Text(
-                            "这是一个bottomSheet",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: Theme.of(context).accentColor,
-                                fontSize: 14.0),
-                          ),
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('底部信息弹窗'),
+            onTap: () {
+              showModalBottomSheet(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return Container(
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Text(
+                          "这是一个bottomSheet",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.blue,
+                              fontSize: 14.0),
                         ),
-                      );
-                    });
-              },
-            ),
+                      ),
+                    );
+                  });
+            },
           ),
-          Container(
-              margin: EdgeInsets.all(20.0),
-              alignment: Alignment.center,
-              child: RaisedButton(
-                  textColor: Colors.white,
-                  color: Colors.blue,
-                  child: Text('CupertinoDialog'),
-                  onPressed: () {
-                    _cupertinoAlertDialog();
-                  })),
-          Container(
-            margin: EdgeInsets.all(20.0),
-            alignment: Alignment.center,
-            child: RaisedButton(
-                textColor: Colors.white,
-                color: Colors.blue,
-                child: Text('CupertinoPicker'),
-                onPressed: () {
-                  _cupertinonPicker();
-                }),
-          )
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('ios风格弹窗'),
+            onTap: () {
+              _cupertinoAlertDialog();
+            },
+          ),
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('ios类型选择器'),
+            onTap: () {
+              _cupertinonPicker();
+            },
+          ),
         ],
       ),
     );
