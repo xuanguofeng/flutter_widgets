@@ -24,88 +24,102 @@ class LayoutSamplePageState extends State<LayoutSamplePage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          Container(
-            margin: EdgeInsets.all(20.0),
-            alignment: Alignment.center,
-            child: RaisedButton(
-              textColor: Colors.white,
-              color: Colors.blue,
-              child: Text('ContainerLayout'),
-              onPressed: () {
-                Navigator.of(context).pushNamed('/ContainerPage');
-              },
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('ContainerLayout'),
+            onTap: () {
+              Navigator.of(context).pushNamed('/ContainerPage');
+            },
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Divider(
+              height: 0.5,
+              color: Colors.grey,
             ),
           ),
-          Container(
-            margin: EdgeInsets.all(20.0),
-            alignment: Alignment.center,
-            child: RaisedButton(
-              textColor: Colors.white,
-              color: Colors.blue,
-              child: Text('CenterLayout'),
-              onPressed: () {
-                Navigator.of(context).pushNamed('/CenterPage');
-              },
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('CenterLayout'),
+            onTap: () {
+              Navigator.of(context).pushNamed('/CenterPage');
+            },
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Divider(
+              height: 0.5,
+              color: Colors.grey,
             ),
           ),
-          Container(
-            margin: EdgeInsets.all(20.0),
-            alignment: Alignment.center,
-            child: RaisedButton(
-              textColor: Colors.white,
-              color: Colors.blue,
-              child: Text('PaddingLayout'),
-              onPressed: () {
-                Navigator.of(context).pushNamed('/PaddingPage');
-              },
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('Paading'),
+            onTap: () {
+              Navigator.of(context).pushNamed('/PaddingPage');
+            },
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Divider(
+              height: 0.5,
+              color: Colors.grey,
             ),
           ),
-          Container(
-            margin: EdgeInsets.all(20.0),
-            alignment: Alignment.center,
-            child: RaisedButton(
-              textColor: Colors.white,
-              color: Colors.blue,
-              child: Text('AlignLayout'),
-              onPressed: () {
-                Navigator.of(context).pushNamed('/AlignLayoutPage');
-              },
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('AlignLayout'),
+            onTap: () {
+              Navigator.of(context).pushNamed('/AlignLayoutPage');
+            },
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Divider(
+              height: 0.5,
+              color: Colors.grey,
             ),
           ),
-          Container(
-            margin: EdgeInsets.all(20.0),
-            alignment: Alignment.center,
-            child: RaisedButton(
-              textColor: Colors.white,
-              color: Colors.blue,
-              child: Text('Row'),
-              onPressed: () {
-                Navigator.of(context).pushNamed('/RowPage');
-              },
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('Row'),
+            onTap: () {
+              Navigator.of(context).pushNamed('/RowPage');
+            },
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Divider(
+              height:0.5,
+              color: Colors.grey,
             ),
           ),
-          Container(
-            margin: EdgeInsets.all(20.0),
-            alignment: Alignment.center,
-            child: RaisedButton(
-              textColor: Colors.white,
-              color: Colors.blue,
-              child: Text('Column'),
-              onPressed: () {
-                Navigator.of(context).pushNamed('/ColumnPage');
-              },
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('Column'),
+            onTap: () {
+              Navigator.of(context).pushNamed('/ColumnPage');
+            },
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Divider(
+              height: 0.5,
+              color: Colors.grey,
             ),
           ),
-          Container(
-            margin: EdgeInsets.all(20.0),
-            alignment: Alignment.center,
-            child: RaisedButton(
-              textColor: Colors.white,
-              color: Colors.blue,
-              child: Text('Stack'),
-              onPressed: () {
-                Navigator.of(context).pushNamed('/StackPage');
-              },
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('Stack'),
+            onTap: () {
+              Navigator.of(context).pushNamed('/StackPage');
+            },
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Divider(
+              height: 0.5,
+              color: Colors.grey,
             ),
           ),
         ],

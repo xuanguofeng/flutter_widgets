@@ -77,7 +77,10 @@ class DialogSamplePageState extends State<DialogSamplePage> {
           ),
           actions: <Widget>[
             new FlatButton(
-              child: new Text('确认',style: TextStyle(color: Colors.blue),),
+              child: new Text(
+                '确认',
+                style: TextStyle(color: Colors.blue),
+              ),
               onPressed: () {
                 Navigator.of(context).pop();
               },
@@ -170,6 +173,13 @@ class DialogSamplePageState extends State<DialogSamplePage> {
               _showSimpleDialog();
             },
           ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Divider(
+              height: 0.5,
+              color: Colors.grey,
+            ),
+          ),
           ListTile(
             trailing: Icon(Icons.keyboard_arrow_right),
             title: Text('普通消息类型对话框'),
@@ -177,12 +187,26 @@ class DialogSamplePageState extends State<DialogSamplePage> {
               _showAlertDialog();
             },
           ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Divider(
+              height: 0.5,
+              color: Colors.grey,
+            ),
+          ),
           ListTile(
             trailing: Icon(Icons.keyboard_arrow_right),
             title: Text('时间类型弹窗'),
             onTap: () {
               showTimePicker(context: context, initialTime: TimeOfDay.now());
             },
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Divider(
+              height: 0.5,
+              color: Colors.grey,
+            ),
           ),
           ListTile(
             trailing: Icon(Icons.keyboard_arrow_right),
@@ -194,6 +218,13 @@ class DialogSamplePageState extends State<DialogSamplePage> {
                   firstDate: DateTime(2010),
                   lastDate: DateTime.now());
             },
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Divider(
+              height: 0.5,
+              color: Colors.grey,
+            ),
           ),
           ListTile(
             trailing: Icon(Icons.keyboard_arrow_right),
@@ -208,14 +239,19 @@ class DialogSamplePageState extends State<DialogSamplePage> {
                         child: Text(
                           "这是一个bottomSheet",
                           textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: Colors.blue,
-                              fontSize: 14.0),
+                          style: TextStyle(color: Colors.blue, fontSize: 14.0),
                         ),
                       ),
                     );
                   });
             },
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Divider(
+              height: 0.5,
+              color: Colors.grey,
+            ),
           ),
           ListTile(
             trailing: Icon(Icons.keyboard_arrow_right),
@@ -224,12 +260,26 @@ class DialogSamplePageState extends State<DialogSamplePage> {
               _cupertinoAlertDialog();
             },
           ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Divider(
+              height: 0.5,
+              color: Colors.grey,
+            ),
+          ),
           ListTile(
             trailing: Icon(Icons.keyboard_arrow_right),
             title: Text('ios类型选择器'),
             onTap: () {
               _cupertinonPicker();
             },
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Divider(
+              height: 0.5,
+              color: Colors.grey,
+            ),
           ),
         ],
       ),

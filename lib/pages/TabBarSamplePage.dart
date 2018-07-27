@@ -17,54 +17,65 @@ class TabBarSamplePageState extends State<TabBarSamplePage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          Container(
-            margin: EdgeInsets.all(20.0),
-            alignment: Alignment.center,
-            child: RaisedButton(
-              textColor: Colors.white,
-              color: Colors.blue,
-              child: Text('TabBar'),
-              onPressed: () {
-                Navigator.of(context).pushNamed('/TabBarPage');
-              },
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('顶部Tab'),
+            onTap: () {
+              Navigator.of(context).pushNamed('/TabBarPage');
+            },
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Divider(
+              height: 0.5,
+              color: Colors.grey,
             ),
           ),
-          Container(
-            margin: EdgeInsets.all(20.0),
-            alignment: Alignment.center,
-            child: RaisedButton(
-              textColor: Colors.white,
-              color: Colors.blue,
-              child: Text('BottomNavigationBar'),
-              onPressed: () {
-                Navigator.of(context).pushNamed('/BottomNavigationBarPage');
-              },
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('底部导航菜单'),
+            onTap: () {
+              Navigator.of(context).pushNamed('/BottomNavigationBarPage');
+            },
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Divider(
+              height: 0.5,
+              color: Colors.grey,
             ),
           ),
-          Container(
-            margin: EdgeInsets.all(20.0),
-            alignment: Alignment.center,
-            child: RaisedButton(
-              textColor: Colors.white,
-              color: Colors.blue,
-              child: Text('CupertinoTabBar（ios风格底部导航）'),
-              onPressed: () {
-                Navigator.of(context).pushNamed('/CupertinoTabBarPage');
-              },
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('iOS风格底部导航菜单'),
+            onTap: () {
+              Navigator.of(context).pushNamed('/CupertinoTabBarPage');
+            },
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Divider(
+              height: 0.5,
+              color: Colors.grey,
             ),
           ),
-          Container(
-            margin: EdgeInsets.all(20.0),
-            alignment: Alignment.center,
-            child: RaisedButton(
-              textColor: Colors.white,
-              color: Colors.blue,
-              child: Text('CupertinoNavigationBar（ios风格顶部导航）'),
-              onPressed: () {
-                Navigator.of(context).pushNamed('/CupertinoNavigationBarPage');
-              },
+
+
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('iOS风格标题'),
+            onTap: () {
+              Navigator.of(context).pushNamed('/CupertinoNavigationBarPage');
+            },
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Divider(
+              height: 0.5,
+              color: Colors.grey,
             ),
           ),
+
         ],
       ),
     );
