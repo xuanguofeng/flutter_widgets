@@ -37,7 +37,30 @@ class ListSamplePageState extends State<ListSamplePage> {
               color: Colors.blue,
               child: Text('ListView（带下拉刷新功能）'),
               onPressed: () {
-                Navigator.of(context).pushNamed('/AnimatedListSample');
+                Navigator.of(context).pushNamed('/RefreshListSample');
+              },
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(20.0),
+            alignment: Alignment.center,
+            child: RaisedButton(
+              textColor: Colors.white,
+              color: Colors.blue,
+              child: Text('ListView（官方示例）'),
+              onPressed: () {
+                Navigator.of(context).pushNamed('/ExpansionTileSample');
+              },
+            ),
+          ),   Container(
+            margin: EdgeInsets.all(20.0),
+            alignment: Alignment.center,
+            child: RaisedButton(
+              textColor: Colors.white,
+              color: Colors.blue,
+              child: Text('GridView'),
+              onPressed: () {
+                Navigator.of(context).pushNamed('/GridViewSample');
               },
             ),
           ),

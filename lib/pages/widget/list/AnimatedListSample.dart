@@ -97,6 +97,7 @@ class _AnimatedListSampleState extends State<AnimatedListSample> {
       ),
     );
   }
+
 }
 
 /// Keeps a Dart List in sync with an AnimatedList.
