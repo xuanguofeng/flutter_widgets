@@ -157,6 +157,8 @@ class DialogSamplePageState extends State<DialogSamplePage> {
         });
   }
 
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -258,6 +260,20 @@ class DialogSamplePageState extends State<DialogSamplePage> {
             title: Text('ios风格弹窗'),
             onTap: () {
               _cupertinoAlertDialog();
+            },
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Divider(
+              height: 0.5,
+              color: Colors.grey,
+            ),
+          ),
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text('ios类型选择器'),
+            onTap: () {
+              _cupertinonPicker();
             },
           ),
           Padding(

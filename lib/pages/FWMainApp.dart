@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widgets/constant/strings.dart';
 import 'package:flutter_widgets/pages/BtnSamplePage.dart';
 import 'package:flutter_widgets/pages/DialogSamplePage.dart';
+import 'package:flutter_widgets/pages/DrawerSample.dart';
 import 'package:flutter_widgets/pages/LayoutSamplePage.dart';
 import 'package:flutter_widgets/pages/ListSamplePage.dart';
 import 'package:flutter_widgets/pages/TabBarSamplePage.dart';
@@ -56,6 +57,7 @@ class _FWMainAppState extends State<FWMainApp> {
         '/RefreshListSample': (BuildContext context) => RefreshListSample(),
         '/ExpansionTileSample': (BuildContext context) => ExpansionTileSample(),
         '/GridViewSample': (BuildContext context) => GridViewSample(),
+        '/DrawerSample': (BuildContext context) => DrawerSample(),
       },
     );
   }
@@ -117,6 +119,7 @@ class _Home extends StatelessWidget {
               _columns[3],
               _columns[4],
               _columns[5],
+              _columns[6],
             ],
           ),
         ),

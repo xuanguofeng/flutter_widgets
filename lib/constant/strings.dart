@@ -7,7 +7,8 @@ class AppStrings {
     'Dialog',
     'Layout',
     'TabBar',
-    'List'
+    'List',
+    'DrawerSample'
   ];
 
   static final List<String> gridTitleImages = [
@@ -16,7 +17,8 @@ class AppStrings {
     'images/ic_dialog.png',
     'images/ic_layout.png',
     'images/ic_tabbar.png',
-    'images/ic_list.png'
+    'images/ic_list.png',
+    'images/ic_drawer.png'
   ];
 
   static final List<String> gridPagesName = [
@@ -25,6 +27,7 @@ class AppStrings {
     '/DialogSamplePage',
     '/LayoutSamplePage',
     '/TabBarSamplePage',
-    '/ListSamplePage'
+    '/ListSamplePage',
+    '/DrawerSample'
   ];
 }
