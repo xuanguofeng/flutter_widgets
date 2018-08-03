@@ -30,7 +30,9 @@ class IconImageSampleState extends State<IconImageSample> {
               SizedBox(
                 height: 10.0,
               ),
-              Center(
+              Container(
+                padding: const EdgeInsets.only(left: 50.0),
+                width: double.infinity,
                 child: Row(
                   children: <Widget>[
                     Icon(Icons.local_airport),
