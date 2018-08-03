@@ -3,11 +3,18 @@ import 'package:flutter_widgets/constant/strings.dart';
 import 'package:flutter_widgets/pages/BtnSamplePage.dart';
 import 'package:flutter_widgets/pages/DialogSamplePage.dart';
 import 'package:flutter_widgets/pages/DrawerSample.dart';
+import 'package:flutter_widgets/pages/GoogleDemoPage.dart';
 import 'package:flutter_widgets/pages/ImageSamplePage.dart';
 import 'package:flutter_widgets/pages/LayoutSamplePage.dart';
 import 'package:flutter_widgets/pages/ListSamplePage.dart';
 import 'package:flutter_widgets/pages/TabBarSamplePage.dart';
 import 'package:flutter_widgets/pages/TextSamplePage.dart';
+import 'package:flutter_widgets/pages/googledemo/DismissItemDemo.dart';
+import 'package:flutter_widgets/pages/googledemo/HorizontalListDemo.dart';
+import 'package:flutter_widgets/pages/googledemo/SnackBarDemo.dart';
+import 'package:flutter_widgets/pages/googledemo/ThemeDemo.dart';
+import 'package:flutter_widgets/pages/googledemo/TypeListDemo.dart';
+import 'package:flutter_widgets/pages/googledemo/UseFontDemo.dart';
 import 'package:flutter_widgets/pages/image/IconImageSample.dart';
 import 'package:flutter_widgets/pages/image/NormalImageSample.dart';
 import 'package:flutter_widgets/pages/layout/AlignLayoutPage.dart';
@@ -65,6 +72,13 @@ class _FWMainAppState extends State<FWMainApp> {
         '/ImageSamplePage': (BuildContext context) => ImageSamplePage(),
         '/NormalImageSample': (BuildContext context) => NormalImageSample(),
         '/IconImageSample': (BuildContext context) => IconImageSample(),
+        '/GoogleDemoPage': (BuildContext context) => GoogleDemoPage(),
+        '/ThemeDemoPage': (BuildContext context) => ThemeDemoPage(),
+        '/SnackBarDemo': (BuildContext context) => SnackBarDemo(),
+        '/UseFontDemo': (BuildContext context) => UseFontDemo(),
+        '/HorizontalListDemo': (BuildContext context) => HorizontalListDemo(),
+        '/TypeListDemo': (BuildContext context) => TypeListDemo(),
+        '/DismissItemDemo': (BuildContext context) => DismissItemDemo(),
       },
     );
   }
@@ -128,6 +142,7 @@ class _Home extends StatelessWidget {
               _columns[5],
               _columns[6],
               _columns[7],
+              _columns[8],
             ],
           ),
         ),

@@ -14,6 +14,11 @@ dev_dependencies:
 
 flutter:
 
+  fonts:
+    - family: FZLanTing
+      fonts:
+        - asset: asset/fonts/font.TTF
+
   uses-material-design: true
   assets:
     - images/ic_button.png
@@ -25,3 +30,4 @@ flutter:
     - images/ic_drawer.png
     - images/ic_image.png
     - images/test1.jpeg
+    - images/ic_google_demo.png

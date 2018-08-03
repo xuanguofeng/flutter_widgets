@@ -9,7 +9,8 @@ class AppStrings {
     'TabBar',
     'List',
     'Drawer',
-    'Image'
+    'Image',
+    'GoogleDemo'
   ];
 
   static final List<String> gridTitleImages = [
@@ -20,7 +21,8 @@ class AppStrings {
     'images/ic_tabbar.png',
     'images/ic_list.png',
     'images/ic_drawer.png',
-    'images/ic_image.png'
+    'images/ic_image.png',
+    'images/ic_google_demo.png'
   ];
 
   static final List<String> gridPagesName = [
@@ -31,6 +33,7 @@ class AppStrings {
     '/TabBarSamplePage',
     '/ListSamplePage',
     '/DrawerSample',
-    '/ImageSamplePage'
+    '/ImageSamplePage',
+    '/GoogleDemoPage'
   ];
 }
