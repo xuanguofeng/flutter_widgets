@@ -18,16 +18,32 @@ class ImageSamplePageState extends State<ImageSamplePage> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Container(
-              margin: EdgeInsets.all(15.0),
-              alignment: Alignment.center,
-              child: CupertinoButton(
-                child: Text('iOS风格按钮'),
-                color: Colors.blue,
-                borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                onPressed: () {
-                  print("ios按钮");
-                },
+            ListTile(
+              trailing: Icon(Icons.keyboard_arrow_right),
+              title: Text('通过Image控件加载网络和本地图片'),
+              onTap: () {
+                Navigator.of(context).pushNamed('/NormalImageSample');
+              },
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 16.0, right: 16.0),
+              child: Divider(
+                height: 0.5,
+                color: Colors.grey,
+              ),
+            ),
+            ListTile(
+              trailing: Icon(Icons.keyboard_arrow_right),
+              title: Text('通过Icon控件展示一些系统icon'),
+              onTap: () {
+                Navigator.of(context).pushNamed('/IconImageSample');
+              },
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 16.0, right: 16.0),
+              child: Divider(
+                height: 0.5,
+                color: Colors.grey,
               ),
             ),
           ],

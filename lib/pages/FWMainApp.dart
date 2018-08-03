@@ -8,6 +8,8 @@ import 'package:flutter_widgets/pages/LayoutSamplePage.dart';
 import 'package:flutter_widgets/pages/ListSamplePage.dart';
 import 'package:flutter_widgets/pages/TabBarSamplePage.dart';
 import 'package:flutter_widgets/pages/TextSamplePage.dart';
+import 'package:flutter_widgets/pages/image/IconImageSample.dart';
+import 'package:flutter_widgets/pages/image/NormalImageSample.dart';
 import 'package:flutter_widgets/pages/layout/AlignLayoutPage.dart';
 import 'package:flutter_widgets/pages/layout/CenterPage.dart';
 import 'package:flutter_widgets/pages/layout/ColumnPage.dart';
@@ -61,6 +63,8 @@ class _FWMainAppState extends State<FWMainApp> {
         '/GridViewSample': (BuildContext context) => GridViewSample(),
         '/DrawerSample': (BuildContext context) => DrawerSample(),
         '/ImageSamplePage': (BuildContext context) => ImageSamplePage(),
+        '/NormalImageSample': (BuildContext context) => NormalImageSample(),
+        '/IconImageSample': (BuildContext context) => IconImageSample(),
       },
     );
   }
