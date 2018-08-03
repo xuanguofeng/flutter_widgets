@@ -3,6 +3,7 @@ import 'package:flutter_widgets/constant/strings.dart';
 import 'package:flutter_widgets/pages/BtnSamplePage.dart';
 import 'package:flutter_widgets/pages/DialogSamplePage.dart';
 import 'package:flutter_widgets/pages/DrawerSample.dart';
+import 'package:flutter_widgets/pages/ImageSamplePage.dart';
 import 'package:flutter_widgets/pages/LayoutSamplePage.dart';
 import 'package:flutter_widgets/pages/ListSamplePage.dart';
 import 'package:flutter_widgets/pages/TabBarSamplePage.dart';
@@ -32,8 +33,7 @@ class _FWMainAppState extends State<FWMainApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-          primaryColor: Colors.blue, accentColor: Colors.white),
+      theme: ThemeData(primaryColor: Colors.blue, accentColor: Colors.white),
       home: _Home(),
       routes: <String, WidgetBuilder>{
         '/BtnSamplePage': (BuildContext context) => BtnSamplePage(),
@@ -50,14 +50,17 @@ class _FWMainAppState extends State<FWMainApp> {
         '/ColumnPage': (BuildContext context) => ColumnPage(),
         '/StackPage': (BuildContext context) => StackPage(),
         '/ListSamplePage': (BuildContext context) => ListSamplePage(),
-        '/BottomNavigationBarPage': (BuildContext context) => BottomNavigationBarPage(),
+        '/BottomNavigationBarPage': (BuildContext context) =>
+            BottomNavigationBarPage(),
         '/CupertinoTabBarPage': (BuildContext context) => CupertinoTabBarPage(),
-        '/CupertinoNavigationBarPage': (BuildContext context) => CupertinoNavigationBarPage(),
+        '/CupertinoNavigationBarPage': (BuildContext context) =>
+            CupertinoNavigationBarPage(),
         '/AnimatedListSample': (BuildContext context) => AnimatedListSample(),
         '/RefreshListSample': (BuildContext context) => RefreshListSample(),
         '/ExpansionTileSample': (BuildContext context) => ExpansionTileSample(),
         '/GridViewSample': (BuildContext context) => GridViewSample(),
         '/DrawerSample': (BuildContext context) => DrawerSample(),
+        '/ImageSamplePage': (BuildContext context) => ImageSamplePage(),
       },
     );
   }
@@ -120,6 +123,7 @@ class _Home extends StatelessWidget {
               _columns[4],
               _columns[5],
               _columns[6],
+              _columns[7],
             ],
           ),
         ),
